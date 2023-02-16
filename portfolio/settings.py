@@ -1,4 +1,4 @@
-import environ
+import os, environ
 from pathlib import Path
 
 env = environ.Env(
@@ -15,7 +15,7 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
-RENDER_EXTERNAL_HOSTNAME = env('RENDER_EXTERNAL_HOSTNAME')
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
