@@ -119,6 +119,9 @@ MEDIA_ROOT = BASE_DIR / MEDIA_URL
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 if not DEBUG:
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    STATIC_ROOT = BASE_DIR / 'static'
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
