@@ -1,12 +1,41 @@
 body {
-    background: #090909;
-  }
-  
-  .bg-black {
-    background: #000;
-  }
-  
-  .card-project:hover {
-    border: 1px solid #eee;
-    cursor: pointer;
-  }
+  background: #090909;
+}
+
+.bg-black {
+  background: #000;
+}
+
+.card-project:hover {
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+hgroup {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+div h3 {
+  margin-bottom: auto;
+}
+
+article div {
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+}
+
+aside {
+  margin-left: 1rem;
+}
