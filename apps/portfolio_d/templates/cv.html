@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
+    {% load static %}
     <header>
         <hgroup>
             <h1>Francisco Franco</h1>
@@ -103,55 +104,119 @@
                 <h3>
                     Links
                 </h3>
-                <ul>
-                    <li>
+                <ul class="list-group list-group-horizontal list-unstyled">
+                    <li class="m-1">
                         <a href="https://www.linkedin.com/in/francisco-javier-franco-bele%C3%B1o-a19270253/"
-                           target="_blank">LinkedIn</a>
+                           target="_blank">
+                            <img src="{% static "icons/linkedin-in.svg" %}"
+                                 alt="Linkedin logo"
+                                 height="30"
+                                 width="30"
+                                 class="bg-primary borde"/>
+                        </a>
                     </li>
-                    <li>
-                        <a href="https://github.com/EE-Francisco" target="_blank">Github</a>
+                    <li class="m-1">
+                        <a href="https://github.com/EE-Francisco" target="_blank">
+                            <img src="{% static "icons/github.svg" %}"
+                                 alt="Github logo"
+                                 height="30"
+                                 width="30"
+                                 class="bg-primary borde"/>
+                        </a>
                     </li>
                 </ul>
             </nav>
             <nav>
-                <h3>Habilidades</h3>
-                    <ul>
-                        <li>Python - Django</li>
-                        <li>SQL - Access - PostgreSQL - MySQL</li>
-                        <li>Git</li>
-                        <li>AWS</li>
-                        <li>HTML5</li>
-                        <li>CSS - Bootstrap</li>
-                        <li>JS - React - Redux</li>
-                        <li>Ofimatica</li>
-                        <li>G-Suit</li>
-                        <li>Desarrollo web</li>
-                        <li>APIs</li>
-                        <li>CMD</li>
-                    </ul>
+                <h3>
+                    Habilidades
+                </h3>
+                <ul>
+                    <li>
+                        Python - Django
+                    </li>
+                    <li>
+                        SQL - Access - PostgreSQL - MySQL
+                    </li>
+                    <li>
+                        Git
+                    </li>
+                    <li>
+                        AWS
+                    </li>
+                    <li>
+                        HTML5
+                    </li>
+                    <li>
+                        CSS - Bootstrap
+                    </li>
+                    <li>
+                        JS - React - Redux
+                    </li>
+                    <li>
+                        Ofimatica
+                    </li>
+                    <li>
+                        G-Suit
+                    </li>
+                    <li>
+                        Desarrollo web
+                    </li>
+                    <li>
+                        APIs
+                    </li>
+                    <li>
+                        CMD
+                    </li>
+                </ul>
             </nav>
             <nav>
-                <h3>Conocimiento básico</h3>
-                    <ul>
-                        <li>Tailwind CSS</li>
-                        <li>Postman</li>
-                        <li>Photoshop</li>
-                        <li>Illustrator</li>
-                        <li>Analisis de datos</li>
-                        <li>Aprendizaje automatico</li>
-                        <li>Telecomunicaciones</li>
-                        <li>Java</li>
-                        <li>C, C++, C#</li>
-                        <li>PHP</li>
-                        <li>Arduino</li>
-                        <li>Assembler</li>
-                        <li>Excel</li>
-                        <li>Power BI</li>
-                        <li>VBA</li>
-                        <li>MatLab</li>
-                        <li>Octopus</li>
-                        <li>Labview</li>
-                    </ul>
+                <h3>
+                    Conocimiento básico
+                </h3>
+                <ul>
+                    <li>
+                        Tailwind CSS
+                    </li>
+                    <li>
+                        Postman
+                    </li>
+                    <li>
+                        Photoshop - Illustrator
+                    </li>
+                    <li>
+                        Analisis de datos - Aprendizaje automatico - Power BI - Excel
+                    </li>
+                    <li>
+                        Telecomunicaciones
+                    </li>
+                    <li>
+                        Java
+                    </li>
+                    <li>
+                        C, C++, C#
+                    </li>
+                    <li>
+                        PHP
+                    </li>
+                    <li>
+                        Arduino
+                    </li>
+                    <li>
+                        Assembler
+                    </li>
+                    <li>
+                        VBA
+                    </li>
+                    <li>
+                        MatLab
+                    </li>
+                    <li>
+                        Octopus
+                    </li>
+                    <li>
+                        Labview
+                    </li>
+                </ul>
             </nav>
         </aside>
     </div>
