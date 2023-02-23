@@ -45,3 +45,11 @@ aside {
 .borde {
   border-radius: 10%;
 }
+
+.card {
+  transition: .3s ease-in-out .1s;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
