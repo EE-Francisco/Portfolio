@@ -1,5 +1,6 @@
 import environ
 from pathlib import Path
+import dj_database_url
 
 env = environ.Env(
     DEBUG=(bool, False)
@@ -73,14 +74,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfolio_store',
-        'USER': 'postgres',
-        'PASSWORD': 'calidadsceu',
-        'HOST': 'localhost',
-        'PORT': ''
-    }
+    'default': dj_database_url.parse(env('DATABASE_URL'))
 }
 
 
