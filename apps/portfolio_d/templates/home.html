@@ -15,11 +15,11 @@
         <strong>Francisco Franco</strong>
       </h1>
       <h3>Desarrollador web</h3>
-      <p class="ps-3">
-        Ingeniero electronico. Tengo experiencia en programación con diversos lenguajes, de los cuales destaco Python.
-        Mi experiencia consiste en optimizar procesos mediante software y en la administración de base de datos. En el ambito
-        academico tengo experiencia en el aprendizaje automatico especificamente en el campo de visión por computadora.
-        Actualmente me enfoco en el desarrollo web con tecnologías como Django, JS, React, Redux, AWS, PostgresSQL entre otras.
+      <p class="m-3">
+        Ingeniero electrónico con experiencia programando en diversos lenguajes, de los cuales destaco Python. Mis labores consisten en optimizar procesos mediante 
+        software y en la administración de base de datos. Actualmente me proyecto como desarrollador web, principalmente debido a las ventajas del desarrollo de 
+        aplicaciones en la nube, con tecnologías como Django, JS, React, Redux, AWS, PostgresSQL, Git, entre otras.
+        En el ámbito académico tengo experiencia en inteligencia artificial, específicamente en el campo de visión por computadora.
       </p>
       <a class="btn btn-primary btn-lg rounded-0 my-3"
          href="{% url 'portfolio:cv' %}">Ver <strong>CV</strong></a>
@@ -28,7 +28,7 @@
   <!-- Porfolio Section -->
   <div class="row my-4 text-center">
     <h3>Mis proyectos</h3>
-    <p>Estos son algunos de mis proyectos que muestran los conceptos básicos de algunas de las tecnologías que uso.</p>
+    <p class="my-3">Estos son proyectos que muestran conceptos básicos de algunas de las tecnologías que uso.</p>
     {% for project in projects %}
       {% if project.url %}
         <div class="col-md-4 p-4">
