@@ -1,0 +1,32 @@
+{% load static %}
+<div class="container">
+  <footer class="d-flex align-items-center py-3 my-4 border-top">
+    <a href="{% url 'portfolio:home' %}"
+       class="col-3 navbar-brand fw-bold fst-italic link-light">FF</a>
+    <p class="col-6 d-flex justify-content-center">© 2023, Francisco Franco</p>
+    <ul class="nav col-3 justify-content-end">
+      <li>
+        <a class="nav-link"
+           href="https://github.com/EE-Francisco/"
+           target="_blank">
+          <img src="{% static "icons/github.svg" %}"
+               alt="Github"
+               height="30"
+               width="30"
+               class="bg-primary borde"/>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link"
+           href="https://www.linkedin.com/in/francisco-javier-franco-bele%C3%B1o-a19270253/"
+           target="_blank">
+          <img src="{% static "icons/linkedin-in.svg" %}"
+               alt="Linkedin"
+               height="30"
+               width="30"
+               class="bg-primary borde"/>
+        </a>
+      </li>
+    </ul>
+  </footer>
+</div>
