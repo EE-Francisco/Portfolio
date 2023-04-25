@@ -33,7 +33,9 @@ DJANGO_APPS = [
 
 PROJECT_APPS = [
     'apps.blog',
-    'apps.portfolio_d'
+    'apps.portfolio_d',
+    'apps.user',
+    'apps.user_documents',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
@@ -102,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
