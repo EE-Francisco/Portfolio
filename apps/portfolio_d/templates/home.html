@@ -16,8 +16,8 @@
       </h1>
       <h3>Desarrollador web</h3>
       <p class="m-3">
-        Ingeniero electrónico con experiencia programando en diversos lenguajes, de los cuales destaco Python. Mis labores consisten en optimizar procesos mediante 
-        software y en la administración de base de datos. Actualmente me proyecto como desarrollador web, principalmente debido a las ventajas del desarrollo de 
+        Ingeniero electrónico con experiencia programando en diversos lenguajes, de los cuales destaco Python. Mis labores consisten en optimizar procesos mediante
+        software y en la administración de base de datos. Actualmente me proyecto como desarrollador web, principalmente debido a las ventajas del desarrollo de
         aplicaciones en la nube, con tecnologías como Django, JS, React, Redux, AWS, PostgresSQL, Git, entre otras.
         En el ámbito académico tengo experiencia en inteligencia artificial, específicamente en el campo de visión por computadora.
       </p>
@@ -27,8 +27,8 @@
   </header>
   <!-- Porfolio Section -->
   <div class="row my-4 text-center">
-    <h3>Mis proyectos</h3>
-    <p class="my-3">Estos son proyectos que muestran conceptos básicos de algunas de las tecnologías que uso.</p>
+    <h3>Proyectos</h3>
+    <p class="my-3">Estos proyectos muestran conceptos básicos de algunas de las tecnologías que uso.</p>
     {% for project in projects %}
       {% if project.url %}
         <div class="col-md-4 p-4">
@@ -47,5 +47,9 @@
         </div>
       {% endif %}
     {% endfor %}
+  </div>
+  <div class="text-center">
+    <h3>Aplicaciones</h3>
+    <p class="my-3">Aplicaciones que he construido.</p>
   </div>
 {% endblock content %}
