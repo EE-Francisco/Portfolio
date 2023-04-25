@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="{% static 'main.css' %}"/>
   </head>
   <body class="text-light">
-    {% include "partials/navbar.html" %}
+    {% block nav %}
+      {% include "partials/navbar.html" %}
+    {% endblock nav %}
     <div class="container p-4">
       {% block content %}
       {% endblock content %}
