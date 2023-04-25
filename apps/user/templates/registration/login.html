@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block nav %}
+{% endblock nav %}
+{% block content %}
+    {% if form.errors %}<p>Your username and password didn't match. Please try again.</p>{% endif %}
+    {% if next %}
+        {% if user.is_authenticated %}
+            <p>
+                Your account doesn't have access to this page. To proceed,
+                please login with an account that has access.
+            </p>
+        {% else %}
+            <p>Please login to see this page.</p>
+        {% endif %}
+    {% endif %}
+    <main class="form-signin text-center">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <a class="m-auto fs-1 d-inline-block mb-4 text-light navbar-brand fw-bold fst-italic"
+               href="{% url 'portfolio:home' %}"
+               role="button">FF</a>
+            <h1 class="h3 mb-3 fw-normal">Please login</h1>
+            <div class="text-dark">
+                <div class="form-floating">
+                    {{ form.username }}
+                    {{ form.username.label_tag }}
+                </div>
+                <div class="form-floating">
+                    {{ form.password }}
+                    {{ form.password.label_tag }}
+                </div>
+            </div>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"/>
+                    Remember me
+                </label>
+            </div>
+            <input type="submit" value="Login" class="w-100 btn btn-lg btn-primary"/>
+            <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
+            <input type="hidden" name="next" value="{{ next }}"/>
+        </form>
+        {# Assumes you set up the password_reset view in your URLconf #}
+        <p>
+            <a href="{% url 'password_reset' %}">Lost password?</a>
+        </p>
+    </main>
+{% endblock content %}
