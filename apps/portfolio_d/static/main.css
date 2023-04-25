@@ -1,4 +1,10 @@
+html,
 body {
+  height: 100%;
+}
+
+body {
+  padding-top: 40px;
   background: #090909;
 }
 
@@ -52,4 +58,23 @@ aside {
 
 .card:hover {
   transform: scale(1.2);
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.table-secondary {
+  background-color: rgb(226, 227, 229);
+}
+
+.table-light {
+  background-color: #f8f9fa;
+}
+
+.bg-white {
+  background-color: white;
 }
