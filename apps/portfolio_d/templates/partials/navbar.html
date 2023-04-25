@@ -13,7 +13,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav">
         {% comment %} <li class="nav-item">
           <a class="nav-link" href="{% url 'blog:posts' %}">Blog</a>
         </li> {% endcomment %}
@@ -23,6 +23,10 @@
              target="_blank">Descargar CV</a>
         </li>
       </ul>
+    </div>
+    <div class="col-md-3 text-end">
+      <a class="btn btn-primary" href="{% url 'login' %}" role="button">Login</a>
+      {% comment %} <button type="button" class="btn btn-primary">Sign-up</button> {% endcomment %}
     </div>
   </div>
 </nav>
