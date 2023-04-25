@@ -6,7 +6,9 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',  include('apps.portfolio_d.urls')),
-    path('blog/', include('apps.blog.urls'))
+    path('blog/', include('apps.blog.urls')),
+    path('user_documents/', include('apps.user_documents.urls')),
+    path('accounts/', include('apps.user.urls'))
 ]
 
 if settings.DEBUG:
