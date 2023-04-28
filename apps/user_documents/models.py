@@ -27,10 +27,19 @@ class RawMaterial(models.Model):
 
 class Product(models.Model):
     product_name = models.CharField(max_length=50)
-    raw_materials = models.ManyToManyField(RawMaterial)
+    raw_materials = models.ManyToManyField(RawMaterial, through='RawMaterialQuantity')
 
     def __str__(self):
         return self.product_name
+
+
+class RawMaterialQuantity(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    raw_material = models.ForeignKey(RawMaterial, on_delete=models.CASCADE)
+    quantity = models.CharField(max_length=10)
+
+    def __str__(self):
+        return f"{self.quantity} {self.raw_material.raw_material_name} needed for {self.product.product_name}"
 
 
 class Patient(models.Model):
