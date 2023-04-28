@@ -96,7 +96,9 @@
                 {% for material in materials %}
                     <tr class="text-center align-middle">
                         <td>
-                            1
+                            {% for rqm in selected_patient.product_name.rawmaterialquantity_set.all %}
+                                {% if rqm.raw_material.raw_material_name == material.supplies %}{{ rqm.quantity }}{% endif %}
+                            {% endfor %}
                         </td>
                         <td colspan="2">
                             {{ material.supplies }}
