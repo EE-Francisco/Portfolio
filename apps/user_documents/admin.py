@@ -7,6 +7,11 @@ class PatientRecordInline(admin.StackedInline):
     extra = 0
 
 
+class RawMaterialQuantityInline(admin.StackedInline):
+    model = RawMaterialQuantity
+    extra = 0
+
+
 class PatientAdmin(admin.ModelAdmin):
     inlines = [PatientRecordInline]
     list_display = ("name", "cc", "product_name")
@@ -23,6 +28,7 @@ class TraceabilityAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
+    inlines = [RawMaterialQuantityInline]
     list_display = ("product_name",)
     search_fields = ("product_name",)
 
@@ -36,3 +42,4 @@ admin.site.register(PatientRecord, PatientRecordAdmin)
 admin.site.register(Traceability, TraceabilityAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(RawMaterial, RawMaterialAdmin)
+admin.site.register(RawMaterialQuantity)
