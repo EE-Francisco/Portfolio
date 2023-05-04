@@ -34,7 +34,11 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class RawMaterialAdmin(admin.ModelAdmin):
-    list_display = ("raw_material_name",)
+    list_display = ("raw_material_name", )
+
+
+class RawMaterialQuantityAdmin(admin.ModelAdmin):
+    list_display = ("product", "raw_material", "quantity")
 
 
 admin.site.register(Patient, PatientAdmin)
@@ -42,4 +46,4 @@ admin.site.register(PatientRecord, PatientRecordAdmin)
 admin.site.register(Traceability, TraceabilityAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(RawMaterial, RawMaterialAdmin)
-admin.site.register(RawMaterialQuantity)
+admin.site.register(RawMaterialQuantity, RawMaterialQuantityAdmin)
