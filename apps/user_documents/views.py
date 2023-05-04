@@ -100,6 +100,18 @@ class IndexPageView(TemplateView):
 
                 context["indices"] = list(map(int, parameters[:-1]))
 
+            # Temporary
+
+                prosthesis = ["DESARTICULADO DE HOMBRO",
+                              "DESARTICULADA DE CADERA",
+                              "TRANSTIBIAL",
+                              "TRANSRADIAL",
+                              "TRANSHUMERAL",
+                              "TRANSFEMORAL"]
+
+                if patient.product_name.product_name in prosthesis:
+                    context["prothesis"] = True
+
         return context
 
     def get(self, request, *args, **kwargs):
