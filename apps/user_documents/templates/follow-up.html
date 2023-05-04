@@ -27,8 +27,23 @@
                              height="60"
                              width=""/>
                     </td>
-                    <th rowspan="2" colspan="6" class="fs-5">Seguimiento al entrenamiento y adaptación para protesis</th>
-                    <td colspan="2">Código: SCEU-F-01-R4</td>
+                    <th rowspan="2" colspan="6" class="fs-5">
+                        Seguimiento al entrenamiento y adaptación para
+                        {% if prothesis %}
+                            protesis
+                        {% else %}
+                            ortesis
+                        {% endif %}
+                        .
+                    </th>
+                    <td colspan="2">
+                        Código: SCEU-F-01-R
+                        {% if prothesis %}
+                            5
+                        {% else %}
+                            4
+                        {% endif %}
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2">Versión: 2</td>
@@ -72,7 +87,7 @@
                         <td colspan="2">{{ record.description }}</td>
                         <td>
                             {% if selected_patient.signature %}
-                                <img src="{{ request.scheme }}://{{ request.META.HTTP_HOST }}{{ selected_patient.signature.url }}"
+                                <img src="{{ selected_patient.signature.url }}"
                                      alt="Firma del usuario"
                                      height=""
                                      width=""/>
@@ -82,9 +97,7 @@
                     </tr>
                 {% endfor %}
                 <tr>
-                    <td colspan="9">
-                        Hace seguimiento a cada consulta:
-                    </td>
+                    <td colspan="9">Hace seguimiento a cada consulta:</td>
                 </tr>
             </tbody>
             <tfoot class="text-center border">
@@ -97,9 +110,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="9">
-                        Director técnico
-                    </td>
+                    <td colspan="9">Director técnico</td>
                 </tr>
             </tfoot>
         </table>
