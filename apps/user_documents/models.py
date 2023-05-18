@@ -17,6 +17,17 @@ YES_NO_CHOICES = [
     (NO, 'NO'),
 ]
 
+SUBCATEGORY_CHOICES = [
+    ('', '---------'),  # opción vacía
+    ('Resortada', 'Resortada'),
+    ('Reaccion a piso', 'Reaccion a piso'),
+    ('Sarmiento corto', 'Sarmiento corto'),
+    ('Sarmiento articulado', 'Sarmiento articulado'),
+    ('Plantillas termoformadas', 'Termoformadas'),
+    ('Plantillas Cuero', 'Cuero'),
+    ('Plantillas UCBL', 'UCBL'),
+]
+
 
 class RawMaterial(models.Model):
     raw_material_name = models.CharField(max_length=50)
@@ -27,7 +38,10 @@ class RawMaterial(models.Model):
 
 class Product(models.Model):
     product_name = models.CharField(max_length=50)
-    raw_materials = models.ManyToManyField(RawMaterial, through='RawMaterialQuantity')
+    raw_materials = models.ManyToManyField(
+        RawMaterial, through='RawMaterialQuantity')
+    subcategory = models.CharField(
+        max_length=50, choices=SUBCATEGORY_CHOICES, blank=True, null=True)
 
     def __str__(self):
         return self.product_name
