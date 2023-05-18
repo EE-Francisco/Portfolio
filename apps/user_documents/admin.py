@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import *
+from .forms import ProductForm
 
 
 class PatientRecordInline(admin.StackedInline):
@@ -28,9 +29,15 @@ class TraceabilityAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
+    form = ProductForm
     inlines = [RawMaterialQuantityInline]
-    list_display = ("product_name",)
+    list_display = ("product_name", "subcategory")
     search_fields = ("product_name",)
+    fieldsets = (
+        (None, {
+            'fields': ('product_name', 'subcategory')
+        }),
+    )
 
 
 class RawMaterialAdmin(admin.ModelAdmin):
