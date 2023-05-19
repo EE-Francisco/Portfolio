@@ -44,7 +44,10 @@ class Product(models.Model):
         max_length=50, choices=SUBCATEGORY_CHOICES, blank=True, null=True)
 
     def __str__(self):
-        return self.product_name
+        if self.subcategory:
+            return f"{self.product_name} - {self.subcategory}"
+        else:
+            return self.product_name
 
 
 class RawMaterialQuantity(models.Model):
